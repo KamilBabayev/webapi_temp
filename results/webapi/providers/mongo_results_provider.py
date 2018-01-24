@@ -38,15 +38,18 @@ class MongoResultsProvider(object):
 
     _thread_pool = thread_pool
 
-    def __init__(self, username, password, port, end_point):
+    def __init__(self, username, password, port, end_point, collection_name='results'):
         self.mongo_conn_url = "mongodb://%s:%s@%s:%s/automation?authMechanism=SCRAM-SHA-1" % (username, password, end_point, port,)
+        self.collection_name = collection_name
 
     @gen.coroutine
     def get_results(self, id=None):
 	mongo_client = None
         try:
             mongo_client = MongoClient(self.mongo_conn_url)
-            self.db = mongo_client['automation']
+            database = mongo_client['automation']
+            collection = database.get_collection(self.collection_name)
+            self.collection = collection
 
             if id:
                 results = yield self.__get_result(id)
@@ -69,7 +72,9 @@ class MongoResultsProvider(object):
         mongo_client = None
 	try:
             mongo_client = MongoClient(self.mongo_conn_url)
-            self.db = mongo_client['automation']
+            database = mongo_client['automation']
+            collection = database.get_collection(self.collection_name)
+            self.collection = collection
 
             results = yield self.__write_result(result)
 
@@ -89,7 +94,7 @@ class MongoResultsProvider(object):
 
     @run_on_executor(executor="_thread_pool")
     def __get_result(self, id):
-        result = self.db.results.find({"_id": id})
+        result = self.collection.find({"_id": ObjectId(id)})
         if result:
             return dumps(result)
         else:
@@ -97,7 +102,7 @@ class MongoResultsProvider(object):
 
     @run_on_executor(executor="_thread_pool")
     def __get_results(self):
-        results = self.db.results.find()
+        results = self.collection.find()
         if results:
             return dumps(results)
         else:
@@ -105,4 +110,5 @@ class MongoResultsProvider(object):
 
     @run_on_executor(executor="_thread_pool")
     def __write_result(self, result):
-        return dumps(self.db.results.insert(result, check_keys=False))
+        return dumps(self.collection.insert(result, check_keys=False))
+

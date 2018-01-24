@@ -25,6 +25,7 @@ AUTOMATION_RESULTS_PORT = os.getenv('AUTOMATION_RESULTS_PORT') or '9797'
 MONGODB_RESULTS_SERVICE_ENDPOINT = os.getenv('MONGODB_RESULTS_SERVICE_ENDPOINT') or '192.168.69.10'
 MONGODB_USER = os.getenv('MONGODB_USER')
 MONGODB_PASSWORD = os.getenv('MONGODB_USER_PASS')
+MONGODB_COLLECTION = os.getenv('MONGODB_COLLECTION', 'testing-results')
 
 
 class MainApplication(tornado.web.Application):
@@ -44,10 +45,15 @@ class MainApplication(tornado.web.Application):
         if 'automation_data_provider' in kwargs:
             auto_data_provider = kwargs['automation_data_provider']
 
+        if 'test_result_provider' in kwargs:
+            test_result_provider = kwargs['test_result_provider']
+
         handlers = [
             (r"/healthcheck", HealthCheckHandler),
             (r"/automation-data", MongoAutomationDataHandler, dict(automation_data_provider=auto_data_provider)),  #get
             (r"/automation-data/([^/]*)", MongoAutomationDataHandler, dict(automation_data_provider=auto_data_provider)),  #get,post
+            (r"/automation/results/testing", MongoResultsHandler, dict(results_provider=test_result_provider)),
+            (r"/automation/results/testing/([^/]*)", MongoResultsHandler, dict(results_provider=test_result_provider)),
             (r"/automation/results", MongoResultsHandler, dict(results_provider=provider)),
             (r"/automation/results/([^/]*)", MongoResultsHandler, dict(results_provider=provider))
 
@@ -58,8 +64,9 @@ class MainApplication(tornado.web.Application):
 
 if __name__ == "__main__":
     PROVIDER = MongoResultsProvider(MONGODB_USER, MONGODB_PASSWORD, MONGODB_PORT, MONGODB_RESULTS_SERVICE_ENDPOINT)
+    TEST_RESULT_PROVIDER = MongoResultsProvider(MONGODB_USER, MONGODB_PASSWORD, MONGODB_PORT, MONGODB_RESULTS_SERVICE_ENDPOINT, collection_name=MONGODB_COLLECTION)
     AUTOMATION_DATA_PROVIDER = MongoAutomationDataProvider(MONGODB_USER, MONGODB_PASSWORD, MONGODB_PORT, MONGODB_RESULTS_SERVICE_ENDPOINT)
-    APP = MainApplication(results_provider=PROVIDER, automation_data_provider=AUTOMATION_DATA_PROVIDER)
+    APP = MainApplication(results_provider=PROVIDER, automation_data_provider=AUTOMATION_DATA_PROVIDER, test_result_provider=TEST_RESULT_PROVIDER)
     SERVER = tornado.httpserver.HTTPServer(APP)
     SERVER.bind(AUTOMATION_RESULTS_PORT)
     SERVER.start(0)  # forks one process per cpu

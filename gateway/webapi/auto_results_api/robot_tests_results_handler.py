@@ -31,13 +31,11 @@ FORMATTER = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 CH.setFormatter(FORMATTER)
 LOGGER.addHandler(CH)
 
-#AUTOMATION_API_GATEWAY_PORT = os.getenv('AUTOMATION_API_GATEWAY_PORT') or '8888'
-#AUTOMATION_API_SERVICE_ENDPOINT = os.getenv('AUTOMATION_API_SERVICE_ENDPOINT') or '192.168.69.10'
 AUTO_RESULTS_PORT = os.getenv('AUTO_RESULTS_PORT') or '8888'
 RESULTS_SERVICE_ENDPOINT = os.getenv('RESULTS_SERVICE_ENDPOINT') or '192.168.69.10'
 
 
-class AutomationResultsHandler(BaseHandler):
+class RobotTestsResultsHandler(BaseHandler):
     """
     Implements the tornado web.RequestHandler.
     GET and POST methods permitted
@@ -77,14 +75,14 @@ class AutomationResultsHandler(BaseHandler):
         """
         status_code = 200
         results_data = {}
-        LOGGER.debug('Port: %s', (AUTOMATION_API_GATEWAY_PORT,))
+        #LOGGER.debug('Port: %s', (AUTO_RESULTS_PORT,))
 
         args_length = len(self.path_args)
         if args_length == 0:
-            url = 'http://%s:%s/automation/results' % (AUTOMATION_API_SERVICE_ENDPOINT, AUTOMATION_API_GATEWAY_PORT,)
+            url = 'http://%s:%s/automation/results/testing' % (RESULTS_SERVICE_ENDPOINT, AUTO_RESULTS_PORT,)
         elif args_length == 1:
             result_id = str(self.path_args[0])
-            url = 'http://%s:%s/automation/results/%s' % (AUTOMATION_API_SERVICE_ENDPOINT, AUTOMATION_API_GATEWAY_PORT, result_id,)
+            url = 'http://%s:%s/automation/results/testing/%s' % (RESULTS_SERVICE_ENDPOINT, AUTO_RESULTS_PORT, result_id,)
         else:
             raise GatewayAPIException(status_code=400, reason="Invalid number of arguments")
 
@@ -111,7 +109,7 @@ class AutomationResultsHandler(BaseHandler):
         Returns:
             result of the insert of the result record. should be an object id
         """
-        url = 'http://%s:%s/automation/results' % (AUTOMATION_API_SERVICE_ENDPOINT, AUTOMATION_API_GATEWAY_PORT,)
+        url = 'http://%s:%s/automation/results/testing' % (RESULTS_SERVICE_ENDPOINT, AUTO_RESULTS_PORT,)
         t_request = HTTPRequest(url=url, method="POST",
                                 headers={'Content-Type': 'application/json'}, body=self.json_body)
 

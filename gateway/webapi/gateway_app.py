@@ -17,6 +17,7 @@ import tornado.web
 from webapi.redis_data_api.redis_api_handler import RedisAPIHandler
 from webapi.redis_data_api.redis_api_list_handler import RedisAPIListHandler
 from webapi.auto_results_api.auto_results_handler import AutomationResultsHandler
+from auto_results_api.robot_tests_results_handler import RobotTestsResultsHandler
 from webapi.health_check_api.health_check_handler import HealthCheckHandler
 from webapi.automation.automation_router_handler import AutomationRouterHandler
 from webapi.automation.automation_audit_handler import AutomationAuditHandler
@@ -63,6 +64,8 @@ class MainApplication(tornado.web.Application):
             (r"/redis-data/keys", RedisAPIHandler, dict(logic_provider=logic_provider)),
             (r"/redis-data/keys/([^/]*)", RedisAPIHandler, dict(logic_provider=logic_provider)),
             (r"/redis-data/list/([^/]*)", RedisAPIListHandler, dict(logic_provider=logic_provider)),
+            (r"/automation/results/testing", RobotTestsResultsHandler, dict(logic_provider=logic_provider)),
+            (r"/automation/results/testing/([^/]*)", RobotTestsResultsHandler, dict(logic_provider=logic_provider)),
             (r"/automation/results", AutomationResultsHandler, dict(logic_provider=logic_provider)),
             (r"/automation/results/([^/]*)", AutomationResultsHandler, dict(logic_provider=logic_provider)),
             (r"/healthcheck", HealthCheckHandler)
