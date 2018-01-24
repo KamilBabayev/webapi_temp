@@ -1,0 +1,735 @@
+{
+    "results": [
+        {
+            "_id": {
+                "$oid": "59cd5026711181000d0c9442"
+            },
+            "plays": [
+                {
+                    "play": {
+                        "id": "02420a00-000c-1898-aeb8-000000000002",
+                        "starttime": 1506382387.793423,
+                        "name": "router"
+                    },
+                    "tasks": [
+                        {
+                            "task": {
+                                "id": "02420a00-000c-1898-aeb8-000000000007",
+                                "name": "collect default set of facts"
+                            },
+                            "hosts": {
+                                "router": {
+                                    "_ansible_parsed": true,
+                                    "invocation": {
+                                        "module_args": {
+                                            "username": null,
+                                            "ssh_keyfile": null,
+                                            "host": null,
+                                            "gather_subset": [
+                                                "!config"
+                                            ],
+                                            "timeout": 10,
+                                            "provider": null,
+                                            "config_format": "text",
+                                            "password": null,
+                                            "port": null,
+                                            "transport": null
+                                        }
+                                    },
+                                    "changed": false,
+                                    "_ansible_no_log": false,
+                                    "ansible_facts": {
+                                        "ansible_net_serialnum": "BH0208343769",
+                                        "ansible_net_model": "ex3200-24t",
+                                        "ansible_net_hostname": "ex3200-24t",
+                                        "ansible_net_gather_subset": [
+                                            "hardware",
+                                            "default",
+                                            "interfaces"
+                                        ],
+                                        "ansible_net_interfaces": {
+                                            "ge-0/0/7": {
+                                                "macaddress": "00:21:59:c1:11:4a",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/6": {
+                                                "macaddress": "00:21:59:c1:11:49",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/5": {
+                                                "macaddress": "00:21:59:c1:11:48",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/4": {
+                                                "macaddress": "00:21:59:c1:11:47",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/3": {
+                                                "macaddress": "00:21:59:c1:11:46",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/2": {
+                                                "macaddress": "00:21:59:c1:11:45",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/1": {
+                                                "macaddress": "00:21:59:c1:11:44",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/0": {
+                                                "macaddress": "00:21:59:c1:11:43",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/9": {
+                                                "macaddress": "00:21:59:c1:11:4c",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/8": {
+                                                "macaddress": "00:21:59:c1:11:4b",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/13": {
+                                                "macaddress": "00:21:59:c1:11:50",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/12": {
+                                                "macaddress": "00:21:59:c1:11:4f",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/11": {
+                                                "macaddress": "00:21:59:c1:11:4e",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/10": {
+                                                "macaddress": "00:21:59:c1:11:4d",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/17": {
+                                                "macaddress": "00:21:59:c1:11:54",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/16": {
+                                                "macaddress": "00:21:59:c1:11:53",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/15": {
+                                                "macaddress": "00:21:59:c1:11:52",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/14": {
+                                                "macaddress": "00:21:59:c1:11:51",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "tap": {
+                                                "macaddress": "Unspecified",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "Software-Pseudo",
+                                                "speed": "Unlimited"
+                                            },
+                                            "ge-0/0/19": {
+                                                "macaddress": "00:21:59:c1:11:56",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/18": {
+                                                "macaddress": "00:21:59:c1:11:55",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "lo0": {
+                                                "macaddress": "Unspecified",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "Loopback",
+                                                "speed": "Unspecified"
+                                            },
+                                            "mtun": {
+                                                "macaddress": "Unspecified",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "Multicast-GRE",
+                                                "speed": "Unlimited"
+                                            },
+                                            "gre": {
+                                                "macaddress": "Unspecified",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "GRE",
+                                                "speed": "Unlimited"
+                                            },
+                                            "local": {
+                                                "macaddress": "Unspecified",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "Loopback",
+                                                "speed": "Unlimited"
+                                            },
+                                            "dsc": {
+                                                "macaddress": "Unspecified",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "Software-Pseudo",
+                                                "speed": "Unspecified"
+                                            },
+                                            "vlan": {
+                                                "macaddress": "00:21:59:c1:11:41",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "1518",
+                                                "type": "VLAN",
+                                                "speed": "1000mbps"
+                                            },
+                                            "lsi": {
+                                                "macaddress": "Unspecified",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "1496",
+                                                "type": "Software-Pseudo",
+                                                "speed": "Unlimited"
+                                            },
+                                            "ge-0/0/22": {
+                                                "macaddress": "00:21:59:c1:11:59",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/23": {
+                                                "macaddress": "00:21:59:c1:11:5a",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/20": {
+                                                "macaddress": "00:21:59:c1:11:57",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ge-0/0/21": {
+                                                "macaddress": "00:21:59:c1:11:58",
+                                                "oper-status": "down",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": null,
+                                                "speed": "Auto"
+                                            },
+                                            "ipip": {
+                                                "macaddress": null,
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "IPIP",
+                                                "speed": "Unlimited"
+                                            },
+                                            "pimd": {
+                                                "macaddress": null,
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "PIMD",
+                                                "speed": "Unlimited"
+                                            },
+                                            "pime": {
+                                                "macaddress": null,
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "Unlimited",
+                                                "type": "PIME",
+                                                "speed": "Unlimited"
+                                            },
+                                            "bme0": {
+                                                "macaddress": "00:0b:ca:fe:00:00",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "1576",
+                                                "type": "Ethernet",
+                                                "speed": "Unspecified"
+                                            },
+                                            "me0": {
+                                                "macaddress": "00:21:59:c1:11:7f",
+                                                "oper-status": "up",
+                                                "admin-status": "up",
+                                                "mtu": "1514",
+                                                "type": "Ethernet",
+                                                "speed": "100mbps"
+                                            }
+                                        },
+                                        "ansible_net_version": null,
+                                        "ansible_net_memtotal_mb": 498688,
+                                        "ansible_net_filesystems": [
+                                            "/dev/da0s2a",
+                                            "devfs",
+                                            "/dev/md0",
+                                            "/dev/md1",
+                                            "/dev/md2",
+                                            "/dev/md3",
+                                            "/dev/md4",
+                                            "/dev/md5",
+                                            "/dev/md6",
+                                            "/dev/md7",
+                                            "/dev/md8",
+                                            "/dev/da0s3e",
+                                            "/dev/md9",
+                                            "/dev/da0s3d",
+                                            "/dev/da0s4d",
+                                            "/dev/md10",
+                                            "procfs",
+                                            "/var/jail/etc",
+                                            "/var/jail/run",
+                                            "/var/jail/tmp",
+                                            "/var/tmp",
+                                            "devfs"
+                                        ],
+                                        "ansible_net_memfree_mb": 27588
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "task": {
+                                "id": "02420a00-000c-1898-aeb8-000000000009",
+                                "name": "debug junos facts"
+                            },
+                            "hosts": {
+                                "router": {
+                                    "msg": {
+                                        "changed": false,
+                                        "ansible_facts": {
+                                            "ansible_net_serialnum": "BH0208343769",
+                                            "ansible_net_model": "ex3200-24t",
+                                            "ansible_net_hostname": "ex3200-24t",
+                                            "ansible_net_gather_subset": [
+                                                "hardware",
+                                                "default",
+                                                "interfaces"
+                                            ],
+                                            "ansible_net_interfaces": {
+                                                "ge-0/0/7": {
+                                                    "macaddress": "00:21:59:c1:11:4a",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/6": {
+                                                    "macaddress": "00:21:59:c1:11:49",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/5": {
+                                                    "macaddress": "00:21:59:c1:11:48",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/4": {
+                                                    "macaddress": "00:21:59:c1:11:47",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/3": {
+                                                    "macaddress": "00:21:59:c1:11:46",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/2": {
+                                                    "macaddress": "00:21:59:c1:11:45",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/1": {
+                                                    "macaddress": "00:21:59:c1:11:44",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/0": {
+                                                    "macaddress": "00:21:59:c1:11:43",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/9": {
+                                                    "macaddress": "00:21:59:c1:11:4c",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/8": {
+                                                    "macaddress": "00:21:59:c1:11:4b",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/13": {
+                                                    "macaddress": "00:21:59:c1:11:50",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/12": {
+                                                    "macaddress": "00:21:59:c1:11:4f",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/11": {
+                                                    "macaddress": "00:21:59:c1:11:4e",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/10": {
+                                                    "macaddress": "00:21:59:c1:11:4d",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/17": {
+                                                    "macaddress": "00:21:59:c1:11:54",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/16": {
+                                                    "macaddress": "00:21:59:c1:11:53",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/15": {
+                                                    "macaddress": "00:21:59:c1:11:52",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/14": {
+                                                    "macaddress": "00:21:59:c1:11:51",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "tap": {
+                                                    "macaddress": "Unspecified",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "Software-Pseudo",
+                                                    "speed": "Unlimited"
+                                                },
+                                                "ge-0/0/19": {
+                                                    "macaddress": "00:21:59:c1:11:56",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/18": {
+                                                    "macaddress": "00:21:59:c1:11:55",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "lo0": {
+                                                    "macaddress": "Unspecified",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "Loopback",
+                                                    "speed": "Unspecified"
+                                                },
+                                                "mtun": {
+                                                    "macaddress": "Unspecified",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "Multicast-GRE",
+                                                    "speed": "Unlimited"
+                                                },
+                                                "gre": {
+                                                    "macaddress": "Unspecified",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "GRE",
+                                                    "speed": "Unlimited"
+                                                },
+                                                "dsc": {
+                                                    "macaddress": "Unspecified",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "Software-Pseudo",
+                                                    "speed": "Unspecified"
+                                                },
+                                                "vlan": {
+                                                    "macaddress": "00:21:59:c1:11:41",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "1518",
+                                                    "type": "VLAN",
+                                                    "speed": "1000mbps"
+                                                },
+                                                "bme0": {
+                                                    "macaddress": "00:0b:ca:fe:00:00",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "1576",
+                                                    "type": "Ethernet",
+                                                    "speed": "Unspecified"
+                                                },
+                                                "lsi": {
+                                                    "macaddress": "Unspecified",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "1496",
+                                                    "type": "Software-Pseudo",
+                                                    "speed": "Unlimited"
+                                                },
+                                                "ge-0/0/22": {
+                                                    "macaddress": "00:21:59:c1:11:59",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/23": {
+                                                    "macaddress": "00:21:59:c1:11:5a",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/20": {
+                                                    "macaddress": "00:21:59:c1:11:57",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ge-0/0/21": {
+                                                    "macaddress": "00:21:59:c1:11:58",
+                                                    "oper-status": "down",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": null,
+                                                    "speed": "Auto"
+                                                },
+                                                "ipip": {
+                                                    "macaddress": null,
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "IPIP",
+                                                    "speed": "Unlimited"
+                                                },
+                                                "pimd": {
+                                                    "macaddress": null,
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "PIMD",
+                                                    "speed": "Unlimited"
+                                                },
+                                                "pime": {
+                                                    "macaddress": null,
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "PIME",
+                                                    "speed": "Unlimited"
+                                                },
+                                                ".local.": {
+                                                    "macaddress": "Unspecified",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "Unlimited",
+                                                    "type": "Loopback",
+                                                    "speed": "Unlimited"
+                                                },
+                                                "me0": {
+                                                    "macaddress": "00:21:59:c1:11:7f",
+                                                    "oper-status": "up",
+                                                    "admin-status": "up",
+                                                    "mtu": "1514",
+                                                    "type": "Ethernet",
+                                                    "speed": "100mbps"
+                                                }
+                                            },
+                                            "ansible_net_version": null,
+                                            "ansible_net_memtotal_mb": 498688,
+                                            "ansible_net_filesystems": [
+                                                "/dev/da0s2a",
+                                                "devfs",
+                                                "/dev/md0",
+                                                "/dev/md1",
+                                                "/dev/md2",
+                                                "/dev/md3",
+                                                "/dev/md4",
+                                                "/dev/md5",
+                                                "/dev/md6",
+                                                "/dev/md7",
+                                                "/dev/md8",
+                                                "/dev/da0s3e",
+                                                "/dev/md9",
+                                                "/dev/da0s3d",
+                                                "/dev/da0s4d",
+                                                "/dev/md10",
+                                                "procfs",
+                                                "/var/jail/etc",
+                                                "/var/jail/run",
+                                                "/var/jail/tmp",
+                                                "/var/tmp",
+                                                "devfs"
+                                            ],
+                                            "ansible_net_memfree_mb": 27588
+                                        }
+                                    },
+                                    "changed": false,
+                                    "_ansible_no_log": false,
+                                    "_ansible_verbose_always": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
